@@ -1,18 +1,15 @@
 /*Maak hier jouw CSS!*/
 
-body {
-    background-color: #FCEFDD;
-}
 
-div {
-    min-width: 576px;
-    background-color: #FCEFDD;
+* {
+    margin: 0;
 }
 
 .container {
     background-color: #FCEFDD;
     display: grid;
     grid-gap: 16px;
+    padding: 16px;
     grid-template-columns: 1fr;
     grid-template-rows: 50px auto 50px 50px 50px 50px;
     grid-template-areas:
@@ -21,8 +18,9 @@ div {
             "C"
             "D"
             "E"
-            "Z"
+            "."
             "F";
+    box-sizing: border-box;
 }
 
 .grid-item {
@@ -57,17 +55,11 @@ div {
     grid-area: E;
 }
 
-.empty {
-    grid-area: Z;
-    background-color: #FCEFDD;
-    border-style: none;
-}
-
 .footer {
     grid-area: F;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
     .container {
         background-color: #FCEFDD;
         display: grid;
@@ -78,7 +70,7 @@ div {
             "A C C"
             "B C C"
             "B E D"
-            "B E Z"
+            "B E ."
             "F F F";
     }
 }
